@@ -1,0 +1,10 @@
+pdb_ng8.admin_settings:
+  title: 'PDB Angular8'
+  description: 'Configure PDB NG8 Settings'
+  route_name: pdb_ng8.form
+  parent: 'system.admin_config_services'
+pdb.admin_settings_link:
+  title: 'PDB Angular8'
+  description: 'Configure PDB NG8 Settings'
+  route_name: pdb_ng8.form
+  menu_name: services

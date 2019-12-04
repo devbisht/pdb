@@ -1,0 +1,10 @@
+name: NG8 ToDo
+machine_name: ng8-todo
+type: pdb
+description: 'NG 8 ToDo example component'
+package: NG8
+version: '1.0.0'
+core: '8.x'
+module_status: active
+presentation: ng8
+project: 'pdb'

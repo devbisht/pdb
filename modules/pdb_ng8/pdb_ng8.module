@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Any procedural Angular 8 PHP work lives here.
+ */
+
+
+/**
+ * Add our component paths for Angular 8.
+ *
+ * @param object $components
+ */
+function pdb_ng8_component_info_alter($components) {
+  // Read info files for each module.
+  foreach ($components as $key => $component) {
+    // Set component path if it hasn't been hardcoded.
+    if ($component->info['presentation'] == 'ng8' && empty($component->info['path'])) {
+      // Use js or ts sourcing depending on development mode.
+      $config_settings = \Drupal::config('pdb_ng8.settings');
+      $ext = 'js';
+      if (isset($config_settings) && $config_settings->get('development_mode')) {
+        $ext = 'ts';
+      }
+      $component->info['path'] = $component->getPath();
+    }
+    else {
+      $path = isset($component->info['path']) ? $component->info['path'] : '';
+      if (isset($path[0]) && $path[0] != '/') {
+        $component->info['path'] = $component->getPath() . '/' . $path;
+      }
+    }
+
+  }
+}
