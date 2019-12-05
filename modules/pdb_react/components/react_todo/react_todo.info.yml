@@ -3,8 +3,8 @@ machine_name: react-todo
 type: pdb
 description: 'React ToDo'
 package: React
-# version: '1.0.0'
-# core: '8.x'
+version: '1.0.0'
+core: '8.x'
 module_status: active
 presentation: react
 add_js:
@@ -23,9 +23,3 @@ add_css:
     component:
       'css/base.css': {}
       'css/index.css': {}
-
-# Information added by Drupal.org packaging script on 2016-11-17
-version: '8.x-1.0-alpha6'
-core: '8.x'
-project: 'pdb'
-datestamp: 1479397524
