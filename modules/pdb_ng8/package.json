@@ -1,15 +1,23 @@
 {
-  "name": "my-dream-app",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+  "name": "pdb_ng8",
+  "version": "1.0.1",
+  "description": "Decoupled Blocks Angular 8 dependencies",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrjmd/pdb.git"
   },
-  "private": true,
+  "contributors": [
+    "Matt Davis"
+  ],
+  "license": "UNLICENSED",
+  "readmeFilename": "README.md",
+  "scripts": {
+    "start": "npm install",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
   "dependencies": {
     "@angular/animations": "8.0.0",
     "@angular/common": "8.0.0",
